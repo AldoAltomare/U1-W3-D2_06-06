@@ -158,7 +158,8 @@
 
       const hideFirstUl = function () {
         let firstList = document.getElementById("firstList");
-        firstList.style.display = "none";
+        // firstList.style.display = "none";
+        firstList.remove();
       };
 
       hideFirstUl();
@@ -167,7 +168,12 @@
        Scrivi una funzione che renda verde il background di ogni lista non ordinata
       */
 
-      const paintItGreen = function () {};
+      const paintItGreen = function () {
+        let allUls = document.querySelectorAll("ul");
+        allUls.forEach((ul) => {
+          ul.style.backgroundColor = "lightgreen";
+        });
+      };
 
       paintItGreen();
 
@@ -194,11 +200,15 @@
 
       const generateTable = function () {};
 
+      generateTable();
+
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
       const addRow = function () {};
+
+      addRow();
 
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
@@ -206,11 +216,15 @@
 
       const hideAllImages = function () {};
 
+      hideAllImages();
+
       /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
       const changeColorWithRandom = function () {};
+
+      changeColorWithRandom();
 
       /* EXTRA ESERCIZIO 16
       Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
