@@ -130,19 +130,38 @@
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
-      const addToTheSecond = function () {};
+      const addToTheSecond = function () {
+        let myList = document.getElementById("secondList");
+        let newList = document.createElement("li");
+        newList.innerText = "4th";
+        myList.appendChild(newList);
+      };
+
+      addToTheSecond();
 
       /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un secondo paragrafo al primo div
     */
 
-      const addParagraph = function () {};
+      const addParagraph = function () {
+        let divTOAppendNewP = document.querySelector("body div div");
+        let newP = document.createElement("p");
+        newP.innerText = "Lorem Ipsum";
+        divTOAppendNewP.appendChild(newP);
+      };
+
+      addParagraph();
 
       /* ESERCIZIO 7
        Scrivi una funzione che faccia scomparire la prima lista non ordinata
     */
 
-      const hideFirstUl = function () {};
+      const hideFirstUl = function () {
+        let firstList = document.getElementById("firstList");
+        firstList.style.display = "none";
+      };
+
+      hideFirstUl();
 
       /* ESERCIZIO 8 
        Scrivi una funzione che renda verde il background di ogni lista non ordinata
@@ -150,17 +169,23 @@
 
       const paintItGreen = function () {};
 
+      paintItGreen();
+
       /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
       const makeItClickable = function () {};
 
+      makeItClickable();
+
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
       const revealFooterLink = function () {};
+
+      revealFooterLink();
 
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
