@@ -214,7 +214,42 @@
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
 
-      const generateTable = function () {};
+      const generateTable = function () {
+        let tableArea = document.getElementById("tableArea");
+        tableArea.innerHTML = `
+        <table>
+          <tr>
+            <th>immagine</th>
+            <th>nomeProdotto</th>
+            <th>quantita</th>
+            <th>prezzo</th>
+          </tr>
+          <tr>
+            <td><image src="https://placekittens.com/200" /></td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+          </tr>
+          <tr>
+            <td><image src="https://placekittens.com/200" /></td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+          </tr>
+          <tr>
+            <td><image src="https://placekittens.com/200" /></td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+          </tr>
+          <tr>
+            <td><image src="https://placekittens.com/200" /></td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+          </tr>
+        </table>`;
+      };
 
       generateTable();
 
@@ -222,15 +257,38 @@
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-      const addRow = function () {};
+      const addRow = function (immagine, nomeProdotto, quantita, prezzo) {
+        const newTd1 = document.createElement("td");
+        newTd1.innerText = immagine;
+        const newTd2 = document.createElement("td");
+        newTd1.innerText = nomeProdotto;
+        const newTd3 = document.createElement("td");
+        newTd1.innerText = quantita;
+        const newTd4 = document.createElement("td");
+        newTd1.innerText = prezzo;
 
-      addRow();
+        const newTr = document.createElement("tr");
+        newTr.appendChild(newTd1);
+        newTr.appendChild(newTd2);
+        newTr.appendChild(newTd3);
+        newTr.appendChild(newTd4);
+
+        const table = document.querySelector("table");
+        table.appendChild(newTr);
+      };
+
+      addRow("https:/placedog.net/200/200", "doggo", 1, 1000);
 
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
-      const hideAllImages = function () {};
+      const hideAllImages = function () {
+        let allImages = document.querySelectorAll("img");
+        allImages.forEach((img) => {
+          img.style.visibility = "hidden";
+        });
+      };
 
       hideAllImages();
 
@@ -238,7 +296,14 @@
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
-      const changeColorWithRandom = function () {};
+      const changeColorWithRandom = function () {
+        let h2 = document.getElementById("changeMyColor");
+        let red = Math.floor(Math.random() * 256);
+        let green = Math.floor(Math.random() * 256);
+        let blue = Math.floor(Math.random() * 256);
+
+        h2.style.color = `rgb(${red},${green},${blue})`;
+      };
 
       changeColorWithRandom();
 
