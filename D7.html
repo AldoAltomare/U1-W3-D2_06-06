@@ -95,13 +95,25 @@
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
     */
 
-      const addClassToTitle = function () {};
+      const addClassToTitle = function () {
+        let h1 = document.querySelector("h1");
+        h1.classList.add("MyHeading");
+      };
+
+      addClassToTitle();
 
       /* ESERCIZIO 3
        Scrivi una funzione per che cambi il testo dei p figli di un div
       */
 
-      const changePcontent = function () {};
+      const changePcontent = function () {
+        let AllPIntoDivs = document.querySelectorAll("div p");
+        AllPIntoDivs.forEach((p) => {
+          p.innerText = "CIAONE";
+        });
+      };
+
+      changePcontent();
 
       /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
